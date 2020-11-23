@@ -17,7 +17,6 @@ exports.upload = multer({ storage: storage });
 
 exports.uploadnewItem = (req, res) => {
   let itemData = req.body;
-  console.log(itemData);
   const item = postService.userPostObj(req.body, req.file.filename);
   postService
     .saveData(item)
